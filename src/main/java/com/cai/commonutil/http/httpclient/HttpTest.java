@@ -14,8 +14,8 @@ public class HttpTest {
     public static void main(String[] args) {
         HttpResponse response = null;
         try {
-            HttpGet get = new HttpGet("http://203.110.166.69:8080/web-ext/cop/callback/startservice");
-            response = HttpClientUtil.getHttpClient().execute(get);
+            HttpGet get = new HttpGet("https://yundao.unimip.cn");
+            response = HttpsClientUtil.getHttpClient().execute(get);
             if(response.getStatusLine().getStatusCode() != HttpStatus.SC_OK){
                 EntityUtils.consume(response.getEntity());
                 //error
